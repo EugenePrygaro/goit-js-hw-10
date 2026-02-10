@@ -1,0 +1,39 @@
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.input-wrapper input {
+  height: 25px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.input-wrapper button {
+  font-size: 18px;
+  font-weight: bold;
+
+  padding: 5px 10px;
+}
+
+.timer {
+  display: flex;
+  gap: 15px;
+
+  font-weight: bold;
+
+  margin-top: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 25px;
+}
+
+.label {
+  font-size: 18px;
+}

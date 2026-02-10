@@ -1,0 +1,30 @@
+.nav {
+  margin: 30px auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+
+  padding: 10px;
+
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-item a:hover {
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
