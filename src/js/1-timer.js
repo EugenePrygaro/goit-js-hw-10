@@ -1,6 +1,9 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 let userSelectedDate = new Date();
 const startButton = document.querySelector('[data-start]');
 const inputField = document.querySelector('#datetime-picker');
@@ -12,11 +15,11 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    if (
-      new Date(selectedDates[0]).setHours(0, 0, 0, 0) <
-      new Date().setHours(0, 0, 0, 0)
-    ) {
-      window.alert('Please choose a date in the future');
+    if (new Date(selectedDates[0]) <= new Date()) {
+      iziToast.show({
+        title: 'Wrong date!',
+        message: `Please choose a date in the future`,
+      });
       startButton.disabled = true;
     } else {
       userSelectedDate = selectedDates[0];
